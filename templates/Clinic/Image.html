@@ -1,0 +1,37 @@
+{% extends "Clinic/clinic_index.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="post" enctype="multipart/form-data">
+
+{#    {% if data %}#}
+{#      <h3 align="center">RESULT  : {{ data }}</h3>#}
+{#    {% endif %}#}
+    <table width="200" border="1" class="table table-active">
+  <tr>
+    <th scope="row">Image</th>
+    <td><label for="fileField"></label>
+      <input type="file" name="fileField" class="form-control" id="fileField" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" scope="row" align="center"><input type="submit" name="button" id="button" value="Upload" class="btn btn-success" /></td>
+    </tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+     {% if data %}
+         <h3 align="center" style="font-size: large"><strong>RESULT  :</strong> {{ data }}</h3>
+         <h4 align="center" style="font-size: medium"><strong>ACCURACY  :</strong> {{ acc }}%</h4>
+    {% endif %}
+</form>
+</body>
+</html>
+{% endblock %}
